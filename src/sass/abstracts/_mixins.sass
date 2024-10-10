@@ -1,0 +1,28 @@
+@mixin style-link($color)
+    display: inline-block
+    text-decoration: none
+    color: $color
+
+@mixin clearFix
+    &::after
+        content: ''
+        display: table
+        clear: both
+        
+    
+@mixin respond($brackpoint)
+    @if $brackpoint == laptop
+        @media only screen and (max-width: 1240px)
+            @content
+    @if $brackpoint == tablet
+        @media only screen and (max-width: 900px)
+                @content
+    @if $brackpoint == phone
+        @media only screen and (max-width: 600px)
+                @content
+      
+    @if $brackpoint == big-screen
+        @media only screen and (min-width: 1800px)
+                @content
+            
+    

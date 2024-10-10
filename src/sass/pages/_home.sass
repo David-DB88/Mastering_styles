@@ -1,0 +1,30 @@
+.section-about
+    @include respond(laptop)
+        margin-bottom: 8rem
+    
+    @include respond(tablet)
+        margin-bottom: 50rem
+    
+
+.section-adventure
+    padding: 21rem 0
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03% , rgba($color-black, 0.7) 99.94%), url(../img/bg-adventure.jpg) center / cover no-repeat
+    transform: skewY(7deg)
+    & > *
+        transform: skewY(-7deg)
+    @include respond(laptop)
+        padding: 12rem 0
+    @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px)
+        background: linear-gradient(90deg, rgba($color-black, 0.7) 0.03% , rgba($color-white, 0.7) 99.94%), url(../img/bg-adventure-big.jpg) center / cover no-repeat
+        transform: skewY(7deg)
+.tour-section
+    padding-top: 21rem
+    margin-bottom: 8rem
+
+.section-feedBack
+    padding: 8rem 0
+    position: relative
+
+.section-book
+    padding: 10rem
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7), rgba($color-brown-dark, 0.7))
